@@ -23,3 +23,17 @@ print(serializer.data)
 
 content = JSONRenderer().render(serializer.data)
 print(content)
+
+
+###########################
+
+######## for ModelSerializer
+serializer = ArticleSerializer()
+print(serializer)
+# we get as
+# ArticleSerializer():
+#     title = models.CharField(max_length=200)
+#     author = models.CharField(max_length=200)
+#     email = models.EmailField(max_length=200)
+#     date = models.DateTimeField()
+

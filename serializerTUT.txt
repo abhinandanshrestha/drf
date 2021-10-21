@@ -1,0 +1,25 @@
+#Serializer in python manage.py shell
+#reference to understand
+
+from api_basic.models import Article
+from api_basic.serializers import ArticleSerializer
+from rest_framework.renderers import JSONRenderer
+from rest_framework.parsers import JSONParser
+a= Article(title='Title',author='Author',email='email@email.com')
+a.save()
+a= Article(title='Another title',author='Author',email='email@email.com')
+a.save()
+
+#serialize one only data
+serializer = ArticleSerializer(a)
+print(serializer.data)
+
+#serialize one many data
+serializer = ArticleSerializer(Article.objects.all(),many=True)
+print(serializer.data)
+
+#this gives us a JSON
+#{'title': 'Another title', 'author': 'Author', 'email': 'email@email.com', 'date': '2021-10-20T17:20:30.361091Z'}
+
+content = JSONRenderer().render(serializer.data)
+print(content)

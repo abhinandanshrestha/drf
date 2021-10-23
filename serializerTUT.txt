@@ -23,3 +23,18 @@ print(serializer.data)
 
 content = JSONRenderer().render(serializer.data)
 print(content)
+
+Timestamp For Table Of Content 
+
+0 - Django REST Framework Introduction      =   00:00:05
+1 - Django Project Setup                                   =    00:04:02
+2 - Django REST Framework  Serializer           =    00:08:58
+3 - REST Framework Modal Serializer         =       00:29:25
+4 - REST Framework Function Based API Views =  00:31:55
+5 - REST Framework api_view() Decorator      =       00:54:37
+6 - REST Class Based API Views                      =         01:08:17
+7 - REST Generic Views & Mixins            =                  01:24:54
+8 - REST Framework Authentication           =              01:40:40
+9 - REST Framework Viewsets & Routers  =                01:56:16
+10 - REST Framework Generic Viewsets       =             02:13:22
+11 - REST Framework Modal Viewsets        =               02:19:45
